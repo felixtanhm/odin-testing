@@ -1,4 +1,4 @@
-import capitalise from "../capitalise";
+import capitalise from "../functions/capitalise";
 
 test('"testing" should return "Testing"', () => {
   expect(capitalise("testing")).toBe("Testing");
