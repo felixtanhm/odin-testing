@@ -13,11 +13,11 @@ test("Cipher wraps around Z: 'xyz' is returned as 'yza'", () => {
 });
 
 test("Cipher wraps around A: 'abc' is returned as 'zab'", () => {
-  expect(caesarCipher.encrypt("xyz", -1)).toBe("yza");
+  expect(caesarCipher.encrypt("abc", -1)).toBe("zab");
 });
 
 test("Cipher shift factor can be higher integers: 'abc' is returned as 'xyz'", () => {
-  expect(caesarCipher.encrypt("abc", 26)).toBe("xyz");
+  expect(caesarCipher.encrypt("abc", 27)).toBe("bcd");
 });
 
 test("Cipher skips special characters: 'Abc!@#xyZ' is returned as 'Bcd!@#yzA'", () => {
