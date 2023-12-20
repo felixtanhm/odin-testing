@@ -29,3 +29,9 @@ test("Analyser throws an error when input is not an array.", () => {
     "Input does not consist of an Array."
   );
 });
+
+test("Analyser throws an error when input is not an array.", () => {
+  expect(analyseArray.analyse([1, 1, 1, 1, NaN])).toBe(
+    "Array consists of a non-number."
+  );
+});
