@@ -13,5 +13,9 @@ test('non integer returns error message', () => {
 });
 
 test('NaN returns error', () => {
-  expect(sum(NaN, 2)).toBe('Inputs need to be integers');
+  expect(sum(NaN, 2)).toBe('Inputs need to be integers.');
+});
+
+test('Null returns error', () => {
+  expect(sum(null, 2)).toBe('Inputs need to be integers.');
 });
