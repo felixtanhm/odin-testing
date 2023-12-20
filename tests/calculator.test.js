@@ -63,3 +63,11 @@ test("0.5 multiplied by 0.2 returns 0.1", () => {
 test('"4" multiplied by 2 returns "Inputs contain a non-number."', () => {
   expect(calculator.multiply("4", 2)).toBe("Inputs contain a non-number.");
 });
+
+test('NaN should return an error', () => {
+  expect(calculator.multiply(NaN, 2)).toBe("Inputs contain a non-number.");
+});
+
+test('null should return an error', () => {
+  expect(calculator.multiply(null, 2)).toBe("Inputs contain a non-number.");
+});

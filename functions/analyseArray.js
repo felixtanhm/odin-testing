@@ -19,10 +19,14 @@ const analyseArray = (() => {
     return arr.length;
   }
 
+  function isValidNumber(number) {
+    return (!Number.isNaN(number) && typeof number === "number");
+  }
+
   function validation(arr) {
     if (!Array.isArray(arr)) return "Input does not consist of an Array.";
 
-    if (!arr.every((value) => typeof value == "number"))
+    if (!arr.every((value) => isValidNumber(value)))
       return "Array consists of a non-number.";
 
     return true;
