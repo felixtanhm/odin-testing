@@ -7,10 +7,7 @@ function sum(a, b) {
     return "Inputs need to be integers.";
   }
 
-  if (typeof a == "number" && typeof b == "number") {
-    return a + b;
-  }
-  return "Inputs need to be integers.";
+  return a + b;
 }
 
 export default sum;
